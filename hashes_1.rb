@@ -1,29 +1,35 @@
 
-Activity:
+# Activity:
 
 # In the below exercises, write code that achieves
 # the desired result. To check your work, run this
 # file by entering the following command in your Terminal: 
 # `ruby hashes_1.rb`
 
-foods = {"apples": 23, "grapes": 507, "eggs": 48}
-p zoo
+foods = {
+  "apples" => 23, 
+  "grapes" => 507, 
+  "eggs" => 48
+}
+
+p foods
 
 # Write code that prints all of the 'keys' of the foods variable 
 # you created above:
-# YOUR CODE HERE
+p foods.keys
 
 # Write code that prints all of the 'values' of the foods variable 
 # you created above:
-# YOUR CODE HERE
+p foods.values
 
 # Write code that prints the value of the second food of the foods variable 
 # you created above:
-# YOUR CODE HERE
+puts foods.values[1]
 
 # Write code that adds a food to the foods hash. 
 # Then, print the updated hash:
-# YOUR CODE HERE
+foods["pineapples"] = 4
+p foods
 
 
 #-------------------
@@ -37,16 +43,25 @@ p zoo
 # Declare a variable that stores hash. Each key should be an attribute of an email and each
 # value should be some appropriate value for that key. Work to have at least 5 key-value pairs.
 
-# Write code that prints your email hash to the terminal.
+email = {
+  from: "garrett.gregor@gmail.com",
+  to: "info@usaclimbing.org",
+  cc: [],
+  bcc: ["caitlin@usaclimbing.org", "mike@usaclimbing.org"],
+  message: "This message is to confirm the receipt of this message",
+  timestamp: (Time.new(2022,12,31,13,12)),
+}
 
+# Write code that prints your email hash to the terminal.
+p email
 
 # Write code that prints all of the 'keys' of the email hash 
 # you created above:
-# YOUR CODE HERE
+p email.keys
 
 # Write code that prints all of the 'values' of the email hash 
 # you created above:
-# YOUR CODE HERE
+p email.values
 
 
 #-------------------
@@ -97,3 +112,32 @@ p posts[0]
 # YOU DO: Create an array of at least 3 EMAIL Hashes, using the same 
 # key-value pairs you used in your email Hash above.
 # Then, print the email Array to the Terminal.
+
+email = [
+  {
+    from: "garrett.gregor@gmail.com",
+    to: "info@usaclimbing.org",
+    cc: [],
+    bcc: [],
+    timestamp: (Time.new(2023, 2, 22, 6, 3)),
+    message: "This is my second message",
+  },
+  {
+    from: "garrett.gregor@gmail.com",
+    to: "audrey.gawrych@gmail.com",
+    cc: ["debbie.gawrych@gmail.com", "doug.gawrych@gmail.com"],
+    bcc: [],
+    timestamp: (Time.new(2023, 2, 21, 4, 19)),
+    message: "We should plan out the next family vacation!"
+  },
+  {
+    from: "audrey.gawrych@gmail.com",
+    to: "garrett.gregor@gmail.com",
+    cc: ["debbie.gawrych@gmail.com", "doug.gawrych@gmail.com", "chris.gawrych@gmail.com", "gavin.gawrych@gmail.com", "elise.gawrych@gmail.com"],
+    bcc: [],
+    timestamp: (Time.new(2023, 2, 21, 4, 20)),
+    message: "We should invite everyone! I included everyone else here!"
+  }
+]
+
+p email
